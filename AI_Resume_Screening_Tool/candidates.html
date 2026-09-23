@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidates Management</title>
+    <link rel="stylesheet" href="member3_frontend.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h2>AI Resume Screening Tool</h2>
+
+        <div>
+            <a href="dashboard-member3.html">Dashboard</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="candidates.html">Candidates</a>
+            <a href="results-member3.html">Results</a>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1>Candidate Management</h1>
+
+        <form id="candidateForm">
+
+            <div class="form-group">
+                <label for="candidateName">Candidate Name</label>
+                <input type="text" id="candidateName" placeholder="Enter candidate name">
+            </div>
+
+            <div class="form-group">
+                <label for="candidateEmail">Email</label>
+                <input type="email" id="candidateEmail" placeholder="Enter candidate email">
+            </div>
+
+            <div class="form-group">
+                <label for="resumeFilename">Resume Filename</label>
+                <input type="text" id="resumeFilename" placeholder="Example: john_resume.pdf">
+            </div>
+
+            <div class="form-group">
+                <label for="extractedText">Extracted Text</label>
+                <textarea id="extractedText" placeholder="Enter extracted resume text"></textarea>
+            </div>
+
+            <button type="submit">Add Candidate</button>
+
+        </form>
+
+        <h2>Candidate List</h2>
+
+        <div id="candidateList">
+
+            <div class="candidate-item">
+                <h3>John Doe</h3>
+                <p><strong>Email:</strong> john@example.com</p>
+                <p><strong>Resume:</strong> john_resume.pdf</p>
+                <p><strong>Extracted Text:</strong> Python, Flask, SQL, HTML, CSS</p>
+                <button onclick="deleteCandidate(this)">Delete</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="member3_frontend.js"></script>
+
+</body>
+</html>

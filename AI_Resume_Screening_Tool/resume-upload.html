@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        AI Resume Screening Tool - Resume Upload
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        AI Resume Screening Tool
+    </div>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="job-description.html">
+            Job Description
+        </a>
+
+        <a href="resume-upload.html">
+            Resume Upload
+        </a>
+
+        <a href="results.html">
+            Results
+        </a>
+
+    </div>
+
+</nav>
+
+<main class="form-container">
+
+    <div class="form-box">
+
+        <h1>
+            Upload Resume
+        </h1>
+
+        <p class="subtitle">
+            Upload a candidate's PDF resume.
+        </p>
+
+        <form id="resumeUploadForm">
+
+            <div class="form-group">
+
+                <label for="resumeFile">
+                    Select Resume
+                </label>
+
+                <input
+                    type="file"
+                    id="resumeFile"
+                    name="resume"
+                    accept=".pdf,application/pdf"
+                >
+
+                <small>
+                    Supported format: PDF only
+                </small>
+
+            </div>
+
+            <div
+                id="fileInfo"
+                class="file-info"
+            ></div>
+
+            <p
+                id="resumeMessage"
+                class="message"
+            ></p>
+
+            <button
+                type="submit"
+                class="btn"
+            >
+                Upload Resume
+            </button>
+
+        </form>
+
+        <div
+            id="extractedTextBox"
+            class="extracted-box"
+        >
+
+            <h3>
+                Extracted Resume Text
+            </h3>
+
+            <textarea
+                id="extractedText"
+                rows="10"
+                readonly
+            ></textarea>
+
+        </div>
+
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

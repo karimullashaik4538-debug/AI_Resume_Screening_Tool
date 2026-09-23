@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        AI Resume Screening Tool - Results
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        AI Resume Screening Tool
+    </div>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="job-description.html">
+            Job Description
+        </a>
+
+        <a href="resume-upload.html">
+            Resume Upload
+        </a>
+
+        <a href="results.html">
+            Results
+        </a>
+
+    </div>
+
+</nav>
+
+<main class="results-container">
+
+    <h1>
+        Resume Screening Results
+    </h1>
+
+    <p class="subtitle">
+        AI-based resume and job skill comparison.
+    </p>
+
+    <section class="form-box">
+
+        <div class="form-group">
+
+            <label for="resultJobDescription">
+                Job Description
+            </label>
+
+            <textarea
+                id="resultJobDescription"
+                rows="6"
+                placeholder="Example: Looking for a Python Flask developer with SQL skills."
+            ></textarea>
+
+        </div>
+
+        <button
+            type="button"
+            class="btn"
+            onclick="analyzeResumes()"
+        >
+            Analyze Resumes
+        </button>
+
+        <p
+            id="resultMessage"
+            class="message"
+        ></p>
+
+    </section>
+
+    <section class="summary-cards">
+
+        <div class="summary-card">
+
+            <h3>
+                Total Candidates
+            </h3>
+
+            <p id="totalCandidates">
+                0
+            </p>
+
+        </div>
+
+        <div class="summary-card">
+
+            <h3>
+                Highest Score
+            </h3>
+
+            <p id="highestScore">
+                0%
+            </p>
+
+        </div>
+
+        <div class="summary-card">
+
+            <h3>
+                Top Candidate
+            </h3>
+
+            <p id="topCandidate">
+                -
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="results-table-container">
+
+        <h2>
+            Candidate Ranking
+        </h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Rank
+                    </th>
+
+                    <th>
+                        Candidate
+                    </th>
+
+                    <th>
+                        Score
+                    </th>
+
+                    <th>
+                        Matching Skills
+                    </th>
+
+                    <th>
+                        Missing Skills
+                    </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="resultsBody">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

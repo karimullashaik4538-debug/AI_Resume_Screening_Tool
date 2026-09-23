@@ -1,0 +1,90 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Screening Tool - Resume Upload</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            AI Resume Screening Tool
+        </div>
+
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="job-description.html">Job Description</a>
+            <a href="resume-upload.html">Resume Upload</a>
+            <a href="results.html">Results</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Resume Upload -->
+    <main class="form-container">
+
+        <div class="form-box">
+
+            <h1>Upload Resume</h1>
+
+            <p class="subtitle">
+                Upload the candidate's resume for AI screening.
+            </p>
+
+
+            <form id="resumeUploadForm">
+
+                <!-- Backend Field: resumeFile -->
+                <div class="form-group">
+
+                    <label for="resumeFile">
+                        Select Resume
+                    </label>
+
+                    <input
+                        type="file"
+                        id="resumeFile"
+                        name="resumeFile"
+                        accept=".pdf,.doc,.docx"
+                    >
+
+                    <small>
+                        Supported formats: PDF, DOC, DOCX
+                    </small>
+
+                </div>
+
+
+                <!-- Selected File -->
+                <div id="fileInfo" class="file-info"></div>
+
+
+                <!-- Validation Message -->
+                <p id="resumeMessage" class="message"></p>
+
+
+                <button type="submit" class="btn">
+                    Upload & Continue
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
+```

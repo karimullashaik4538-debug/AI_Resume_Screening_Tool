@@ -1,0 +1,109 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Screening Tool - Results</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            AI Resume Screening Tool
+        </div>
+
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="job-description.html">Job Description</a>
+            <a href="resume-upload.html">Resume Upload</a>
+            <a href="results.html">Results</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Results -->
+    <main class="results-container">
+
+        <h1>Resume Screening Results</h1>
+
+        <p class="subtitle">
+            AI-based comparison of the resume with the job requirements.
+        </p>
+
+
+        <!-- Match Score -->
+        <section class="score-card">
+
+            <h2>Resume Match Score</h2>
+
+            <!-- Backend Field: matchScore -->
+            <div id="matchScore" class="score">
+                82%
+            </div>
+
+            <p>
+                Good Match
+            </p>
+
+        </section>
+
+
+        <!-- Skills Analysis -->
+        <section class="skills-section">
+
+            <div class="skills-card">
+
+                <h2>Matching Skills</h2>
+
+                <!-- Backend Field: matchingSkills -->
+                <ul id="matchingSkills">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                </ul>
+
+            </div>
+
+
+            <div class="skills-card">
+
+                <h2>Missing Skills</h2>
+
+                <!-- Backend Field: missingSkills -->
+                <ul id="missingSkills">
+                    <li>TypeScript</li>
+                    <li>Node.js</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- Actions -->
+        <section class="result-actions">
+
+            <a href="resume-upload.html" class="btn">
+                Upload Another Resume
+            </a>
+
+            <a href="dashboard.html" class="secondary-btn">
+                Back to Dashboard
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
+```
